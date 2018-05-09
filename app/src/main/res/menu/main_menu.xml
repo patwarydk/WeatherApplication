@@ -10,8 +10,9 @@
 
     <item android:title="Celcius"
         android:id="@+id/celcius"
-        app:showAsAction="never"
-        />
+        app:showAsAction="never" />
+
+    
     <item android:title="Fahrenheit"
         android:id="@+id/fahrenheit"
         app:showAsAction="never"/>
