@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Current"));
         tabLayout.addTab(tabLayout.newTab().setText("Forecast"));
 
-        TestPagerAdapter adapter = new TestPagerAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
+        TestPagerAdapter adapter = new TestPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
@@ -59,21 +59,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_menu,menu);
+        inflater.inflate(R.menu.main_menu, menu);
         return true;
     }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        MenuItem search= menu.findItem(R.id.search);
+        MenuItem search = menu.findItem(R.id.search);
         MenuItem celcius = menu.findItem(R.id.celcius);
         MenuItem fahrenheit = menu.findItem(R.id.fahrenheit);
 
-        if(!isFahrenheit)
-        {
+        if (!isFahrenheit) {
             fahrenheit.setVisible(true);
             celcius.setVisible(false);
-        }else{
+        } else {
             fahrenheit.setVisible(false);
             celcius.setVisible(true);
         }
@@ -83,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
     private class TestPagerAdapter extends FragmentPagerAdapter {
         private int tabCount;
+
         public TestPagerAdapter(FragmentManager fm, int tabCount) {
             super(fm);
             this.tabCount = tabCount;
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            switch (position){
+            switch (position) {
                 case 0:
                     return new Current();
                 case 1:
@@ -118,6 +118,4 @@ public class MainActivity extends AppCompatActivity {
             return  null;
         }
     }
-
-
 }
