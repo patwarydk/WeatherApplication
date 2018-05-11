@@ -13,7 +13,6 @@ import android.view.ViewGroup;
  */
 public class Forecast extends Fragment {
 
-
     public Forecast() {
         // Required empty public constructor
     }
