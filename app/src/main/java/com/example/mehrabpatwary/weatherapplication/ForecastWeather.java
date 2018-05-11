@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Forecast extends Fragment {
+public class ForecastWeather extends Fragment {
 
 
-    public Forecast() {
+    public ForecastWeather() {
         // Required empty public constructor
     }
 
@@ -23,8 +23,8 @@ public class Forecast extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.forecast, container, false);
+        View view = inflater.inflate(R.layout.fragment_forecast_weather, container, false);
+        return view;
     }
 
 }

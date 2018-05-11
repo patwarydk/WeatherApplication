@@ -107,9 +107,9 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new Current();
+                    return new CurrentWeather();
                 case 1:
-                    return new Forecast();
+                    return new ForecastWeather();
 
             }
             return null;
